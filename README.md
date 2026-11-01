@@ -12,7 +12,7 @@ It will work with basic JDK library GUI to interact with the user, and store dat
 - [ ] Users and Accounts
 - [ ] Cloud Sync
 - [ ] Web Versions or Other Platforms
-![Eisenhower Matrix ver 1.0](docs/Eisenhower Matrix.pdf)
+![Eisenhower Matrix ver 1.0](docs/eisenhower_matrix.pdf)
 
 ## Tech Stack
 Languages: Java
