@@ -6,13 +6,13 @@ The todo list tracker I use keeps on trying to charge me money, and locks certai
 
 ## How It Works
 It will work with basic JDK library GUI to interact with the user, and store data in a file (locally)
-![Basic Flowchart](Plan_Design/basic_flowchart.png)
+![Basic Flowchart](docs/basic_flowchart.png)
 
 ## Future Plans / Roadmap
 - [ ] Users and Accounts
 - [ ] Cloud Sync
 - [ ] Web Versions or Other Platforms
-![Eisenhower Matrix ver 1.0](Plan_Design/Eisenhower Matrix.pdf)
+![Eisenhower Matrix ver 1.0](docs/Eisenhower Matrix.pdf)
 
 ## Tech Stack
 Languages: Java
