@@ -53,4 +53,17 @@ External Tools: IntelliJ IDEA IDE (and included plugins)
    
 
 ## Usage
+Run the app from the project root first:
+```bash
+java -cp src TodoApp
+```
+
+### Example
+- Input: Push "Add Task" button and then type "task1", click "ok", then confirm it by clicking "ok" again. After it is created,  toggle it as completed.
+- Output (in newly created text file "tasks.txt"):
+  ```text
+  1|task1
+  ```
+  
+## Demo
 will be added in the future (stay tuned)
