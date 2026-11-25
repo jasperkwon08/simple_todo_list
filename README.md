@@ -7,12 +7,32 @@ The todo list tracker I use keeps on trying to charge me money, and locks certai
 ## How It Works
 It will work with basic JDK library GUI to interact with the user, and store data in a file (locally)\
 ![Basic Flowchart](docs/basic_flowchart.png)
+Usernames haven't been added to the flowchart yet, but they will be added in the future.
+- Usernames are used to create a unique file for each user under "task_files" folder, and the tasks are stored in a text file in the format of "completed|task" (where completed is 0 or 1).\
 
-## Future Plans / Roadmap
-- [ ] Users and Accounts
+## Versions and Plans
+### Current Version (v1.1 Patch)
+- [x] Add and Remove Task (v1.0)
+- [x] List Task (v1.0)
+- [x] Working and Interactive GUI (v1.0)
+- [x] Task Completion Toggle (v1.0)
+- [x] Local File Saving using Java File Operations (v1.0)
+- [x] Users (v1.1)
+
+### Future Plans / Roadmap
+- [ ] Date and Time
+- [ ] Choose Reset Dates (e.g. Daily, Weekly, Monthly, days of week)
+- [ ] Better UI
+- [ ] Notifications
+- [ ] Analytics (e.g. how many tasks completed, how many tasks added, etc.)
 - [ ] Cloud Sync
-- [ ] Web Versions or Other Platforms\
-![Eisenhower Matrix ver 1.0](docs/eisenhower_matrix.pdf)
+- [ ] Web Versions or Other Platforms
+- [ ] Mobile Versions (e.g. Android, iOS)
+- [ ] Compatibility with other apps (e.g. import/export)
+- [ ] Subtasks\
+
+![Eisenhower Matrix v1.0](docs/eisenhower_matrix.pdf)
+the above is an Eisenhower Matrix from v1.0 of the app (now outdated, but still a good reference for future versions)
 
 ## Tech Stack
 Languages: Java\
