@@ -24,14 +24,14 @@ External Tools: IntelliJ IDEA IDE (and included plugins)
 - Git to clone the repository
     - Run `git -v` (or `git --version`) to see if Git is already installed. If not, follow the guide below to install it.
 - [Git Installation Guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- JDK 17 or higher (for compiling and running the program)
+- JDK 8+ (for compiling and running the program)
     - Run `java -version` and `javac -version` to see if the JDK is already installed. If not, follow the guide below to install it.
     ```bash
     java -version
     javac -version
     ```
-- [JDK Installation Guide](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html)
-- You might also want to do a reinstallation if there is a version mismatch between the two commands, or if either version is less than 17.
+- [JDK Installation Guide](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html)
+- You might also want to do a reinstallation if there is a version mismatch between the two commands, or if either version is less than 8.
 
 ### Installing
 1. Clone the repository
