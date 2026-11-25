@@ -59,8 +59,14 @@ public class TaskManager {
     }
 
     private void saveTasks() {
+        File file = new File(fileName);
+        if (tasks.isEmpty()) {
+            file.delete();
+            new File("task_files").delete(); // folder deletion should fail if not empty
+            return;
+        }
         new File("task_files").mkdir();
-        try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter(file))) {
             for (Task task : tasks) {
                 String flag = task.isDone() ? "1" : "0";
                 writer.println(flag + "|" + task.getName());
