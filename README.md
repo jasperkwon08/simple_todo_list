@@ -50,7 +50,7 @@ External Tools: IntelliJ IDEA IDE (and included plugins)
    ```bash
    java -cp src TodoApp
    ```
-   
+
 
 ## Usage
 Run the app from the project root first:
@@ -58,12 +58,23 @@ Run the app from the project root first:
 java -cp src TodoApp
 ```
 
-### Example
-- Input: Push "Add Task" button and then type "task1", click "ok", then confirm it by clicking "ok" again. After it is created,  toggle it as completed.
-- Output (in newly created text file "tasks.txt"):
+### Normal Usage Example
+- Input: Enter "john" at the username prompt, click "ok", push "Add Task" button, type "task1", click "ok", confirm by clicking "ok" again, and toggle it as completed.
+- Output (in newly created text file under task_files folder, "task_files/john_tasks.txt"):
   ```text
   1|task1
   ```
+
+### Default Fallback
+- Input: Click "Cancel" (or leave it blank and click "ok") at the startup username prompt, push "Add Task" button, type "task1", click "ok", and confirm by clicking "ok" again.
+- Output (in newly created text file under task_files folder, "task_files/default_tasks.txt"):
+  ```text
+  0|task1
+  ```
+
+### Empty List Cleanup
+- Input: Click "Remove" next to the last remaining task for "john" and confirm by clicking "Yes".
+- Output: "task_files/john_tasks.txt" is automatically deleted (and the "task_files" folder is deleted too if no other user files remain).
   
 ## Demo
 will be added in the future (stay tuned)
