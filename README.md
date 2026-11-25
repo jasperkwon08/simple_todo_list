@@ -26,7 +26,7 @@ External Tools: IntelliJ IDEA IDE (and included plugins)
 - [Git Installation Guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - JDK 17 or higher (for compiling and running the program)
     - Run `java -version` and `javac -version` to see if the JDK is already installed. If not, follow the guide below to install it.
-    - ```bash
+    ```bash
     java -version
     javac -version
     ```
@@ -36,7 +36,7 @@ External Tools: IntelliJ IDEA IDE (and included plugins)
 ### Installing
 1. Clone the repository
    ```bash
-   git clone [https://github.com/jasperkwon08/simple_todo_list.git](https://github.com/jasperkwon08/simple_todo_list.git)
+   git clone https://github.com/jasperkwon08/simple_todo_list.git
    ```
 2. Navigate into the project folder
    ```bash
