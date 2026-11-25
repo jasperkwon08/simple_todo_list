@@ -9,11 +9,15 @@ import java.awt.GridLayout;
 
 public class TodoApp extends JFrame {
 
-    private TaskManager manager = new TaskManager();
+    private TaskManager manager;
+    private String username;
     private JPanel listPanel = new JPanel(new GridLayout(0, 1));
 
     public TodoApp() {
-        setTitle("To-Do List");
+        username = getUsername("default");
+        manager = new TaskManager(username + "_tasks.txt");
+
+        setTitle("Todo List - " + username);
         setSize(400, 500);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -21,16 +25,51 @@ public class TodoApp extends JFrame {
         JButton addButton = new JButton("Add Task");
         addButton.addActionListener(e -> addTask());
 
+        JButton switchButton = new JButton("Switch User");
+        switchButton.addActionListener(e -> switchUser());
+
         JPanel topPanel = new JPanel();
         topPanel.add(addButton);
+        topPanel.add(switchButton);
 
-        // keeps the rows from stretching to fill the window
         JPanel centerPanel = new JPanel(new BorderLayout());
         centerPanel.add(listPanel, BorderLayout.NORTH);
 
         add(topPanel, BorderLayout.NORTH);
         add(new JScrollPane(centerPanel), BorderLayout.CENTER);
 
+        showTasks();
+    }
+
+    // asks for username, fallback is used if Cancel is clicked
+    private String getUsername(String fallback) {
+        while (true) {
+            String input = JOptionPane.showInputDialog("Enter your username:");
+            if (input == null) {
+                return fallback;
+            }
+            String name = input.trim().toLowerCase();
+            if (name.isEmpty()) {
+                return "default";
+            }
+            // regex to check if username contains numbers of symbols
+            if (name.matches("[a-z]+")) {
+                return name;
+            }
+            JOptionPane.showMessageDialog(null,
+                    "Usernames can only contain letters (no numbers, symbols or spaces). Please try again.",
+                    "Invalid Username", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    private void switchUser() {
+        String newName = getUsername(username);
+        if (newName.equals(username)) {
+            return;
+        }
+        username = newName;
+        manager = new TaskManager(username + "_tasks.txt");
+        setTitle("Todo List - " + username);
         showTasks();
     }
 

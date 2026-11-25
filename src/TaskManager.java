@@ -7,10 +7,15 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class TaskManager {
-    private static final String FILE_NAME = "tasks.txt";
+    private String fileName;
     private ArrayList<Task> tasks = new ArrayList<>();
 
     public TaskManager() {
+        this("default_tasks.txt");
+    }
+
+    public TaskManager(String fileName) {
+        this.fileName = fileName;
         loadTasks();
     }
 
@@ -35,7 +40,7 @@ public class TaskManager {
 
     // each line structure: 1|Buy milk  (1 = done, 0 = not done, basically boolean logic)
     private void loadTasks() {
-        File file = new File(FILE_NAME);
+        File file = new File(fileName);
         if (!file.exists()) {
             return;
         }
@@ -54,7 +59,7 @@ public class TaskManager {
     }
 
     private void saveTasks() {
-        try (PrintWriter writer = new PrintWriter(new FileWriter(FILE_NAME))) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
             for (Task task : tasks) {
                 String flag = task.isDone() ? "1" : "0";
                 writer.println(flag + "|" + task.getName());
