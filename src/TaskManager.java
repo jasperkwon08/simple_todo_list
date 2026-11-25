@@ -15,7 +15,7 @@ public class TaskManager {
     }
 
     public TaskManager(String fileName) {
-        this.fileName = fileName;
+        this.fileName = "task_files/" + fileName;
         loadTasks();
     }
 
@@ -59,6 +59,7 @@ public class TaskManager {
     }
 
     private void saveTasks() {
+        new File("task_files").mkdir();
         try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
             for (Task task : tasks) {
                 String flag = task.isDone() ? "1" : "0";
