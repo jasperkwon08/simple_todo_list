@@ -97,4 +97,4 @@ java -cp src TodoApp
 - Output: "task_files/john_tasks.txt" is automatically deleted (and the "task_files" folder is deleted too if no other user files remain).
   
 ## Demo
-will be added in the future (stay tuned)
+[v1.1 App Demo Video](https://drive.google.com/file/d/17EBDv069FrOgLm3ZLFaW15OeLpC5mAmH/view?usp=sharing)
